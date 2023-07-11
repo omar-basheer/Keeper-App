@@ -27,6 +27,9 @@ function addNote(n: Notetype){
 }
 
 function App() {
+    const[title,setTitle] = useState<string>("")
+    const[description,setDescription] = useState<string>("")
+
     const [localNote, setLocalNote] = useState<Array<Notetype>>([]);
     useEffect(() => {
         setLocalNote(notes);
@@ -34,7 +37,7 @@ function App() {
     [])
 
     function addToLocalNote(m: Notetype ){
-
+        setLocalNote([...localNote, m])
     }
 
     return (
@@ -49,6 +52,26 @@ function App() {
                             />
                         )
                 })}
+
+                <input onChange={(event) => {
+                    setTitle(event.target.value)
+                }}
+                value = {title}
+                ></input>
+                <textarea onChange={(event) =>{
+                    setDescription(event.target.value)
+                }}
+                value ={description}
+                ></textarea>
+                <button onClick={()=>{
+                    addToLocalNote(
+                        {
+                            title, description, key:localNote.length
+                        }
+                    )
+                    setTitle("")
+                    setDescription("")
+                }}>add to note</button>
 
                 {/* {addNote} */}
                 {/* {notes.map(note =>(
