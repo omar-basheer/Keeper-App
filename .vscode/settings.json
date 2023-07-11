@@ -1,5 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "editor.fontFamily": "",
-    "editor.fontSize": 14
+    "editor.fontSize": 14,
+    "editor.wordWrap": "wordWrapColumn",
+    "chat.editor.wordWrap": "on"
 }

@@ -1,5 +1,8 @@
-export interface Note{
-    key: number
+export interface SingleNote{
+    key?: number
+    id: number
     title: string,
-    description: string
+    content: string
 }
+
+export type OnAddFunction = (note:SingleNote ) =>void;
