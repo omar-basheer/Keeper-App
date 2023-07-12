@@ -3,7 +3,7 @@ import { SingleNote, OnAddFunction } from "./Types";
 
 function CreateArea(props:{onAdd: OnAddFunction}) {
 
-    const [note, setNote] = useState<SingleNote>({ id: 0, title: '', content: '' });
+    const [note, setNote] = useState<SingleNote>({ title: '', content: '' });
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const { name, value } = event.target;
@@ -17,14 +17,13 @@ function CreateArea(props:{onAdd: OnAddFunction}) {
     }
 
     function submitNote(event: React.MouseEvent<HTMLButtonElement>) {
-        props.onAdd(note);
+        const trimmedTitle = note.title.trim();
+        const trimmedContent = note.content.trim();
+        if (trimmedTitle !== '' && trimmedContent !== ''){
+            props.onAdd(note);
+        }
+        setNote({title: '', content: ''})
         event.preventDefault();
-        // setNoteList(prevList => {
-        //     return{
-        //             ...prevList,
-        //             note
-        //     }
-        // })
     }
 
     return (

@@ -11,11 +11,18 @@ function App() {
   const [noteList, setNoteList] = useState<SingleNote[]>([]);
 
   function addNote(note: SingleNote){
-    // console.log(note)
     setNoteList(prevList => {
       return [...prevList, note];
     })
     console.log(noteList)
+  }
+
+  function deleteNote(id: number){
+    setNoteList(prevList => {
+      return prevList.filter((noteItem, index) => {
+        return index !== id;
+      });
+    })
   }
 
 
@@ -25,10 +32,13 @@ function App() {
       <CreateArea 
       onAdd={addNote}
       />
-      {noteList.map(noteItem => {
+      {noteList.map((noteItem, index) => {
         return <Note 
+        key={index}
+        id={index}
         title={noteItem.title}
         content = {noteItem.content}
+        onDelete={deleteNote}
         />
       })}
       <Footer />
