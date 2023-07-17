@@ -1,17 +1,35 @@
 import React from "react";
-import { DeleteFunction } from "./Types";
+import { DeleteFunction, EditFunction } from "./Types";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
-function Note(props: {onDelete: DeleteFunction, title: string, content:string, id: number}) {
+function Note(props: {
+  onDelete: DeleteFunction, 
+  onEdit: EditFunction
+  title: string, 
+  content:string, 
+  id: number,
+  key: number
+}) {
 
-  function handleClick(event: React.MouseEvent<HTMLButtonElement>){
+  function handleDelete(event: React.MouseEvent<HTMLButtonElement>){
     props.onDelete(props.id)
+  }
+
+  function handleEdit(event: React.MouseEvent<HTMLButtonElement>){
+    props.onEdit(props.id)
   }
 
   return (
     <div className="note">
       <h1><b>{props.title}</b></h1>
       <p>{props.content}</p>
-      <button onClick={handleClick}>delete</button>
+      <button onClick={handleDelete}>
+        <DeleteIcon />
+      </button>
+      <button onClick={handleEdit}>
+        <EditIcon />
+      </button>
     </div>
     
   );

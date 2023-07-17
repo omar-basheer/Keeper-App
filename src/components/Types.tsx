@@ -5,3 +5,4 @@ export interface SingleNote{
 
 export type OnAddFunction = (note:SingleNote ) =>void;
 export type DeleteFunction = (id: number ) =>void;
+export type EditFunction = (id: number) => void

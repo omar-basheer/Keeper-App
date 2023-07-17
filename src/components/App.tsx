@@ -25,6 +25,9 @@ function App() {
     })
   }
 
+  function editNote(id: number){
+    
+  }
 
   return (
     <div>
@@ -39,6 +42,7 @@ function App() {
         title={noteItem.title}
         content = {noteItem.content}
         onDelete={deleteNote}
+        onEdit={editNote}
         />
       })}
       <Footer />
