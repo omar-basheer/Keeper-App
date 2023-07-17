@@ -1,5 +1,5 @@
-# Note App
-Note App is a simple web application that allows you to create and manage notes, inspired by Google Keep. This app is built with React and TypeScript, providing a clean and intuitive user interface for creating and organizing your notes.
+# Keeper 
+Keeper is a simple web application that allows you to create and manage notes, inspired by Google Keep. This app is built with React and TypeScript, providing a clean and intuitive user interface for creating and organizing your notes.
 
 # Features
 Add a new note: Create a note by entering a title and content.
