@@ -23,8 +23,8 @@ npm start
 # Project Structure
 The project structure follows a typical React application structure:
 
-src: Contains the source code files.
-components: Holds the React components used in the app.
-Types.tsx: Defines the TypeScript interfaces used for type checking.
-App.tsx: The main component that renders the app.
-index.tsx: The entry point of the application.
+- src: Contains the source code files.
+- components: Holds the React components used in the app.
+- Types.tsx: Defines the TypeScript interfaces used for type checking.
+- App.tsx: The main component that renders the app.
+- index.tsx: The entry point of the application.
