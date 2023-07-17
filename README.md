@@ -4,6 +4,7 @@ Keeper is a simple web application that allows you to create and manage notes, i
 # Features
 Add a new note: Create a note by entering a title and content.
 Delete a note: Remove a note from the list of saved notes.
+Edit a note: Edit a note already in the list of saved notes
 Note list: Display all the saved notes with their titles and content.
 Responsive Design: The app is designed to be responsive and adapts to different screen sizes, making it usable on both desktop and mobile devices.
 
