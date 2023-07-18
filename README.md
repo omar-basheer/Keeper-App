@@ -12,7 +12,7 @@ Keeper is a simple web application that allows you to create and manage notes, i
 
 # Installation
 1. Clone the repository:
-git clone https://github.com/your-username/note-app.git
+git clone https://github.com/omar-basheer/note-app.git
 
 2. Install dependencies:
 cd note-app
